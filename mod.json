@@ -1,17 +1,17 @@
 {
-   "Name": "Example.Mod",
-   "Description": "A cool mod that does cool stuff",
+   "Name": "Macitron.Juggermite",
+   "Description": "Gives Papa all his kits, turning him into a juggernaut of thermite. Lord knows he needs it.",
+   "LoadPriority": 2,
+   "RequiredOnClient": false,
    "Version": "1.0.0",
-   "DownloadLink": "https://northstar.thunderstore.io/package/download/Example/Mod/",
-
-   "LoadPriority": 0,
-   "ConVars": [],
-   "Scripts": [{
-      "Path": "example.nut",
-      "RunOn": "(CLIENT || SERVER) && MP",
-      "ClientCallback": {
-         "Before":"example_callback"
+   
+   "Scripts": [
+      {
+         "Path": "scorch_juggernaut.nut",
+         "RunOn": "SERVER && MP",
+         "ServerCallback": {
+            "After": "Init_Juggermite"
+         }
       }
-   }],
-   "Localisation": []
+   ]
 }
